@@ -130,6 +130,23 @@ class LinkedList {
       return null;
     }
   }
+
+  search(data) {
+    if(!this.head) {
+      return -1;
+    }
+
+    let node = this.head;
+    let index = 0;
+    while(node) {
+      if(node.data === data) {
+        return index;
+      }
+      node = node.next;
+      index++;
+    }
+    return -1;
+  }
 }
 
 const list = new LinkedList();
@@ -143,7 +160,6 @@ list.prepend(30);
 list.append(40);
 list.append(50);
 
-// console.log(list.getSize());
 console.log(list.print());
 list.insert(60, 1);
 list.insert(70, 4);
@@ -153,5 +169,6 @@ list.remove(3);
 console.log(list.print());
 list.removeNode(50);
 console.log(list.print());
-list.removeNode(30);
-console.log(list.print());
+// list.removeNode(30);
+// console.log(list.print());
+console.log(list.search(10));
