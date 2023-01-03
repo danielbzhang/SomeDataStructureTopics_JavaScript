@@ -1,2 +1,2 @@
-# Some Data Structure Topics in JavaScript from Youtuber Codevolution
+# Some Data Structure Topics in JavaScript from Codevolution
 - Linked List
